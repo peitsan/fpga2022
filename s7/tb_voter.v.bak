@@ -1,0 +1,6 @@
+timescale 1ns/100ps
+module tb_voter;
+	reg tb_A;
+	reg tb_B;
+	reg tb_C;
+	

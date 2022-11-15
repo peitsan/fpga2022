@@ -1,0 +1,781 @@
+Fitter report for s8ddf
+Tue Nov 15 12:46:18 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Ignored Assignments
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. Bidir Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Pad To Core Delay Chain Fanout
+ 15. Fitter Device Options
+ 16. Operating Settings and Conditions
+ 17. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Fitter Summary                                                                   ;
++------------------------------------+---------------------------------------------+
+; Fitter Status                      ; Failed - Tue Nov 15 12:46:18 2022           ;
+; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                      ; s8ddf                                       ;
+; Top-level Entity Name              ; max10_10m08_top                             ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M02SCM153C8G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 0 / 2,304 ( 0 % )                           ;
+;     Total combinational functions  ; 0 / 2,304 ( 0 % )                           ;
+;     Dedicated logic registers      ; 0 / 2,304 ( 0 % )                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 74 / 112 ( 66 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 110,592 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 32 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                                    ;
++--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Option                                                             ; Setting                               ; Default Value                         ;
++--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Device                                                             ; 10M02SCM153C8G                        ;                                       ;
+; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
+; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
+; Fit Attempts to Skip                                               ; 0                                     ; 0.0                                   ;
+; Use smart compilation                                              ; Off                                   ; Off                                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation   ; On                                    ; On                                    ;
+; Enable compact report table                                        ; Off                                   ; Off                                   ;
+; Auto Merge PLLs                                                    ; On                                    ; On                                    ;
+; Router Timing Optimization Level                                   ; Normal                                ; Normal                                ;
+; Perform Clocking Topology Analysis During Routing                  ; Off                                   ; Off                                   ;
+; Placement Effort Multiplier                                        ; 1.0                                   ; 1.0                                   ;
+; Router Effort Multiplier                                           ; 1.0                                   ; 1.0                                   ;
+; Optimize Hold Timing                                               ; All Paths                             ; All Paths                             ;
+; Optimize Multi-Corner Timing                                       ; On                                    ; On                                    ;
+; Power Optimization During Fitting                                  ; Normal compilation                    ; Normal compilation                    ;
+; SSN Optimization                                                   ; Off                                   ; Off                                   ;
+; Optimize Timing                                                    ; Normal compilation                    ; Normal compilation                    ;
+; Optimize Timing for ECOs                                           ; Off                                   ; Off                                   ;
+; Regenerate Full Fit Report During ECO Compiles                     ; Off                                   ; Off                                   ;
+; Optimize IOC Register Placement for Timing                         ; Normal                                ; Normal                                ;
+; Final Placement Optimizations                                      ; Automatically                         ; Automatically                         ;
+; Fitter Initial Placement Seed                                      ; 1                                     ; 1                                     ;
+; Periphery to Core Placement and Routing Optimization               ; Off                                   ; Off                                   ;
+; PCI I/O                                                            ; Off                                   ; Off                                   ;
+; Weak Pull-Up Resistor                                              ; Off                                   ; Off                                   ;
+; Enable Bus-Hold Circuitry                                          ; Off                                   ; Off                                   ;
+; Auto Packed Registers                                              ; Auto                                  ; Auto                                  ;
+; Auto Delay Chains                                                  ; On                                    ; On                                    ;
+; Auto Delay Chains for High Fanout Input Pins                       ; Off                                   ; Off                                   ;
+; Allow Single-ended Buffer for Differential-XSTL Input              ; Off                                   ; Off                                   ;
+; Treat Bidirectional Pin as Output Pin                              ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Fitting     ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Performance ; Off                                   ; Off                                   ;
+; Perform Register Duplication for Performance                       ; Off                                   ; Off                                   ;
+; Perform Logic to Memory Mapping for Fitting                        ; Off                                   ; Off                                   ;
+; Perform Register Retiming for Performance                          ; Off                                   ; Off                                   ;
+; Perform Asynchronous Signal Pipelining                             ; Off                                   ; Off                                   ;
+; Fitter Effort                                                      ; Auto Fit                              ; Auto Fit                              ;
+; Physical Synthesis Effort Level                                    ; Normal                                ; Normal                                ;
+; Logic Cell Insertion - Logic Duplication                           ; Auto                                  ; Auto                                  ;
+; Auto Register Duplication                                          ; Auto                                  ; Auto                                  ;
+; Auto Global Clock                                                  ; On                                    ; On                                    ;
+; Auto Global Register Control Signals                               ; On                                    ; On                                    ;
+; Reserve all unused pins                                            ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
+; Synchronizer Identification                                        ; Auto                                  ; Auto                                  ;
+; Enable Beneficial Skew Optimization                                ; On                                    ; On                                    ;
+; Optimize Design for Metastability                                  ; On                                    ; On                                    ;
+; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                                   ; Off                                   ;
+; Enable input tri-state on active configuration pins in user mode   ; Off                                   ; Off                                   ;
++--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                         ;
++--------------+-----------------+--------------+------------+---------------+----------------+
+; Name         ; Ignored Entity  ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
++--------------+-----------------+--------------+------------+---------------+----------------+
+; I/O Standard ; max10_10m08_top ;              ; Clock      ; 2.5 V         ; QSF Assignment ;
++--------------+-----------------+--------------+------------+---------------+----------------+
+
+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 0 / 2,304 ( 0 % )   ;
+;     -- Combinational with no register       ; 0                   ;
+;     -- Register only                        ; 0                   ;
+;     -- Combinational with a register        ; 0                   ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 0                   ;
+;     -- 3 input functions                    ; 0                   ;
+;     -- <=2 input functions                  ; 0                   ;
+;     -- Register only                        ; 0                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 0                   ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers*                            ; 0 / 2,837 ( 0 % )   ;
+;     -- Dedicated logic registers            ; 0 / 2,304 ( 0 % )   ;
+;     -- I/O registers                        ; 0 / 533 ( 0 % )     ;
+;                                             ;                     ;
+; Total LABs                                  ; Not available       ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 74 / 112 ( 66 % )   ;
+;     -- Clock pins                           ; 0 / 4 ( 0 % )       ;
+;     -- Dedicated input pins                 ; 0 / 1 ( 0 % )       ;
+;                                             ;                     ;
+; M9Ks                                        ; 0 / 12 ( 0 % )      ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )       ;
+; Total block memory bits                     ; 0 / 110,592 ( 0 % ) ;
+; Total block memory implementation bits      ; 0 / 110,592 ( 0 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 32 ( 0 % )      ;
+; PLLs                                        ; 0 / 1 ( 0 % )       ;
+; Global signals                              ; 0                   ;
+;     -- Global clocks                        ; 0 / 10 ( 0 % )      ;
+; JTAGs                                       ; 0 / 1 ( 0 % )       ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
+; Remote update blocks                        ; 0 / 1 ( 0 % )       ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
+; Maximum fan-out                             ; 1                   ;
+; Highest non-global fan-out                  ; 1                   ;
+; Total fan-out                               ; 128                 ;
+; Average fan-out                             ; 0.63                ;
++---------------------------------------------+---------------------+
+*  Register count does not include registers inside RAM blocks or DSP blocks.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                          ;
++------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
+; Name       ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
++------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
+; Arduino_A0 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A1 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A2 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A3 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A4 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A5 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A6 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; Arduino_A7 ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; CLOCK      ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; RESET_N    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; SWITCH1    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; SWITCH2    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; SWITCH3    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; SWITCH4    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; SWITCH5    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
++------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                             ;
++------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name ; Pin #      ; I/O Bank ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; LED1 ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; LED2 ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; LED3 ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; LED4 ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; LED5 ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
++------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-------------------------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
+; Name                    ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++-------------------------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
+; Arduino_IO0             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO1             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO10            ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO11            ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO12            ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO13            ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO2             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO3             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO4             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO5             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO6             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO7             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO8             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; Arduino_IO9             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B12N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B12P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B14N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B14P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B16N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B16P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B1N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B1P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B3N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B3P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B5N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B5P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B7N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B7P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B9N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_B9P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_L20N_CLK1N       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_L20P_CLK1P       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_L27N_PLL_CLKOUTN ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_L27P_PLL_CLKOUTP ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R14N_CLK2N       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R14P_CLK2P       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R16N_CLK3N       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R16P_CLK3P       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R18N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R18P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R26N_DPCLK2      ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R26P_DPCLK3      ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R27N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R27P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R28N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R28P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R33N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_R33P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T10N             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T10P             ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T1N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T1P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T4N              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; DIFFIO_T6P              ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
++-------------------------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
+
+
++----------------------------------------------------------+
+; I/O Bank Usage                                           ;
++----------+----------------+---------------+--------------+
+; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
++----------+----------------+---------------+--------------+
+; 1A       ; 0 / 8 ( 0 % )  ; --            ; --           ;
+; 1B       ; 0 / 10 ( 0 % ) ; --            ; --           ;
+; 2        ; 0 / 10 ( 0 % ) ; --            ; --           ;
+; 3        ; 0 / 28 ( 0 % ) ; --            ; --           ;
+; 5        ; 0 / 12 ( 0 % ) ; --            ; --           ;
+; 6        ; 0 / 16 ( 0 % ) ; --            ; --           ;
+; 8        ; 0 / 28 ( 0 % ) ; --            ; --           ;
+; Unknown  ; 74             ; --            ;              ;
++----------+----------------+---------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                                             ;
++----------+------------+----------+---------------------------------+-------+--------------+---------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                  ; Dir.  ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+---------------------------------+-------+--------------+---------+------------+-----------------+----------+--------------+
+; A1       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; A2       ; 158        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A3       ; 160        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A5       ; 153        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A7       ; 151        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A9       ; 147        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A11      ; 149        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A13      ; 141        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; A14      ; 137        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A15      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; B1       ; 3          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; B2       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; B3       ;            ; --       ; VCCA3                           ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; B4       ; 155        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B5       ;            ; 8        ; VCCIO8                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; B6       ; 148        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B7       ; 146        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B8       ; 136        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B9       ;            ; 8        ; VCCIO8                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; B10      ;            ; 8        ; VCCIO8                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; B11      ; 145        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B12      ; 143        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B13      ; 135        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B14      ; 133        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B15      ; 131        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C1       ; 1          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; C2       ; 2          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; C8       ; 134        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C14      ; 117        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; C15      ; 115        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; D2       ; 0          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; D4       ;            ;          ; NC                              ;       ;              ;         ; --         ;                 ; --       ; --           ;
+; D5       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; D6       ; 154        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D7       ; 150        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D8       ; 142        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D9       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; D10      ; 132        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D11      ; 130        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D12      ; 128        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; D14      ;            ; --       ; VCCA2                           ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; E1       ; 5          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; E2       ; 7          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; E4       ;            ;          ; NC                              ;       ;              ;         ; --         ;                 ; --       ; --           ;
+; E5       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; E6       ; 156        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E7       ; 152        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E8       ; 144        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E9       ; 140        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E10      ; 138        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E11      ; 126        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; E12      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; E14      ; 113        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; E15      ; 111        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; F2       ;            ; 1A, 1B   ; VCCIO1                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; F4       ;            ;          ; NC                              ;       ;              ;         ; --         ;                 ; --       ; --           ;
+; F5       ; 4          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F11      ; 114        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F12      ; 116        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F14      ;            ; 6        ; VCCIO6                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; G1       ; 12         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; G2       ; 13         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; G4       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; G5       ; 6          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G7       ; 10         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G8       ;            ; --       ; VCC_ONE                         ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; G9       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; G11      ; 110        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G12      ; 112        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G14      ;            ; 6        ; VCCIO6                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; G15      ; 108        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H2       ;            ; 1A, 1B   ; VCCIO1                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; H3       ; 20         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H4       ; 18         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; H5       ; 16         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; H7       ;            ; --       ; VCC_ONE                         ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; H8       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; H9       ;            ; --       ; VCC_ONE                         ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; H11      ; 100        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H12      ; 102        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H13      ; 104        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H14      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; J1       ; 14         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; J2       ; 22         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J4       ; 28         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J5       ; 30         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J7       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; J8       ;            ; --       ; VCC_ONE                         ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; J9       ; 90         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J11      ; 92         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J12      ; 98         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J14      ; 93         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J15      ; 106        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K2       ; 26         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K4       ; 34         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K5       ; 32         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K11      ; 82         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K12      ; 84         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K14      ; 91         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L1       ; 24         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L2       ;            ; 2        ; VCCIO2                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; L4       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L5       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L6       ; 48         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L7       ; 50         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L8       ; 56         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L9       ; 68         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L10      ; 72         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L11      ; 80         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L12      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; L14      ;            ; 5        ; VCCIO5                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; L15      ; 85         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; M2       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; M4       ; 44         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M5       ; 46         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M6       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; M7       ; 58         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M8       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M9       ; 70         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M10      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; M11      ; 73         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M12      ; 78         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M14      ; 83         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N1       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N2       ;            ; --       ; VCCA1                           ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; N8       ; 62         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; N14      ; 81         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N15      ; 79         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P1       ; 37         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P2       ; 42         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P3       ; 45         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P4       ; 49         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P5       ;            ; 3        ; VCCIO3                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; P6       ; 52         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P7       ; 54         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P8       ; 55         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P9       ; 57         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P10      ;            ; 3        ; VCCIO3                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; P11      ;            ; 3        ; VCCIO3                          ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; P12      ; 63         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P13      ;            ; --       ; VCCA4                           ; power ;              ;         ; --         ;                 ; --       ; --           ;
+; P14      ; 74         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P15      ; 66         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R1       ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
+; R2       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; R3       ; 47         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R5       ; 51         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R7       ; 53         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R9       ; 59         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R11      ; 61         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; R13      ; 76         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R14      ; 64         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP ;       ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R15      ;            ;          ; GND                             ; gnd   ;              ;         ; --         ;                 ; --       ; --           ;
++----------+------------+----------+---------------------------------+-------+--------------+---------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name ; Entity Name     ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-----------------+--------------+
+; |max10_10m08_top           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0          ; 0            ; 0       ; 0         ; 74   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |max10_10m08_top    ; max10_10m08_top ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                                     ;
++-------------------------+----------+---------------+---------------+-----------------------+-----+------+
+; Name                    ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
++-------------------------+----------+---------------+---------------+-----------------------+-----+------+
+; SWITCH1                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SWITCH2                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SWITCH3                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SWITCH4                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SWITCH5                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; LED1                    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; LED2                    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; LED3                    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; LED4                    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; LED5                    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; CLOCK                   ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A0              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A1              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A2              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A3              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A4              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A5              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A6              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_A7              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; RESET_N                 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO0             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO1             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO2             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO3             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO4             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO5             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO6             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO7             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO8             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO9             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO10            ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO11            ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO12            ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; Arduino_IO13            ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_L27N_PLL_CLKOUTN ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_L27P_PLL_CLKOUTP ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_L20N_CLK1N       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_L20P_CLK1P       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R14P_CLK2P       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R14N_CLK2N       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R16P_CLK3P       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R16N_CLK3N       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R26N_DPCLK2      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R26P_DPCLK3      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B1N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B1P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B3N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B3P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B5N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B5P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B7N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B7P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B9N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B9P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T1P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T1N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T4N              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T6P              ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B12N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B12P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B14N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B14P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B16N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_B16P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R18P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R18N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R27P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R28P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R27N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R28N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R33P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_R33N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T10P             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; DIFFIO_T10N             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
++-------------------------+----------+---------------+---------------+-----------------------+-----+------+
+
+
++-------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                        ;
++-------------------------+-------------------+---------+
+; Source Pin / Fanout     ; Pad To Core Index ; Setting ;
++-------------------------+-------------------+---------+
+; SWITCH1                 ;                   ;         ;
+; SWITCH2                 ;                   ;         ;
+; SWITCH3                 ;                   ;         ;
+; SWITCH4                 ;                   ;         ;
+; SWITCH5                 ;                   ;         ;
+; CLOCK                   ;                   ;         ;
+; Arduino_A0              ;                   ;         ;
+; Arduino_A1              ;                   ;         ;
+; Arduino_A2              ;                   ;         ;
+; Arduino_A3              ;                   ;         ;
+; Arduino_A4              ;                   ;         ;
+; Arduino_A5              ;                   ;         ;
+; Arduino_A6              ;                   ;         ;
+; Arduino_A7              ;                   ;         ;
+; RESET_N                 ;                   ;         ;
+; Arduino_IO0             ;                   ;         ;
+; Arduino_IO1             ;                   ;         ;
+; Arduino_IO2             ;                   ;         ;
+; Arduino_IO3             ;                   ;         ;
+; Arduino_IO4             ;                   ;         ;
+; Arduino_IO5             ;                   ;         ;
+; Arduino_IO6             ;                   ;         ;
+; Arduino_IO7             ;                   ;         ;
+; Arduino_IO8             ;                   ;         ;
+; Arduino_IO9             ;                   ;         ;
+; Arduino_IO10            ;                   ;         ;
+; Arduino_IO11            ;                   ;         ;
+; Arduino_IO12            ;                   ;         ;
+; Arduino_IO13            ;                   ;         ;
+; DIFFIO_L27N_PLL_CLKOUTN ;                   ;         ;
+; DIFFIO_L27P_PLL_CLKOUTP ;                   ;         ;
+; DIFFIO_L20N_CLK1N       ;                   ;         ;
+; DIFFIO_L20P_CLK1P       ;                   ;         ;
+; DIFFIO_R14P_CLK2P       ;                   ;         ;
+; DIFFIO_R14N_CLK2N       ;                   ;         ;
+; DIFFIO_R16P_CLK3P       ;                   ;         ;
+; DIFFIO_R16N_CLK3N       ;                   ;         ;
+; DIFFIO_R26N_DPCLK2      ;                   ;         ;
+; DIFFIO_R26P_DPCLK3      ;                   ;         ;
+; DIFFIO_B1N              ;                   ;         ;
+; DIFFIO_B1P              ;                   ;         ;
+; DIFFIO_B3N              ;                   ;         ;
+; DIFFIO_B3P              ;                   ;         ;
+; DIFFIO_B5N              ;                   ;         ;
+; DIFFIO_B5P              ;                   ;         ;
+; DIFFIO_B7N              ;                   ;         ;
+; DIFFIO_B7P              ;                   ;         ;
+; DIFFIO_B9N              ;                   ;         ;
+; DIFFIO_B9P              ;                   ;         ;
+; DIFFIO_T1P              ;                   ;         ;
+; DIFFIO_T1N              ;                   ;         ;
+; DIFFIO_T4N              ;                   ;         ;
+; DIFFIO_T6P              ;                   ;         ;
+; DIFFIO_B12N             ;                   ;         ;
+; DIFFIO_B12P             ;                   ;         ;
+; DIFFIO_B14N             ;                   ;         ;
+; DIFFIO_B14P             ;                   ;         ;
+; DIFFIO_B16N             ;                   ;         ;
+; DIFFIO_B16P             ;                   ;         ;
+; DIFFIO_R18P             ;                   ;         ;
+; DIFFIO_R18N             ;                   ;         ;
+; DIFFIO_R27P             ;                   ;         ;
+; DIFFIO_R28P             ;                   ;         ;
+; DIFFIO_R27N             ;                   ;         ;
+; DIFFIO_R28N             ;                   ;         ;
+; DIFFIO_R33P             ;                   ;         ;
+; DIFFIO_R33N             ;                   ;         ;
+; DIFFIO_T10P             ;                   ;         ;
+; DIFFIO_T10N             ;                   ;         ;
++-------------------------+-------------------+---------+
+
+
++---------------------------------------------------------------------------------------------+
+; Fitter Device Options                                                                       ;
++------------------------------------------------------------------+--------------------------+
+; Option                                                           ; Setting                  ;
++------------------------------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR)                     ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)                              ; Off                      ;
+; Enable device-wide output enable (DEV_OE)                        ; Off                      ;
+; Enable INIT_DONE output                                          ; Off                      ;
+; Configuration scheme                                             ; Internal Configuration   ;
+; Enable Error Detection CRC_ERROR pin                             ; Off                      ;
+; Enable open drain on CRC_ERROR pin                               ; Off                      ;
+; Enable nCONFIG, nSTATUS, and CONF_DONE pins                      ; On                       ;
+; Enable JTAG pin sharing                                          ; Off                      ;
+; Enable nCE pin                                                   ; Off                      ;
+; Enable CONFIG_SEL pin                                            ; On                       ;
+; Enable input tri-state on active configuration pins in user mode ; Off                      ;
+; Configuration Voltage Level                                      ; Auto                     ;
+; Force Configuration Voltage Level                                ; Off                      ;
+; Data[0]                                                          ; As input tri-stated      ;
+; Data[1]/ASDO                                                     ; As input tri-stated      ;
+; FLASH_nCE/nCSO                                                   ; As input tri-stated      ;
+; DCLK                                                             ; As output driving ground ;
++------------------------------------------------------------------+--------------------------+
+
+
++------------------------------------+
+; Operating Settings and Conditions  ;
++---------------------------+--------+
+; Setting                   ; Value  ;
++---------------------------+--------+
+; Nominal Core Voltage      ; 1.20 V ;
+; Low Junction Temperature  ; 0 °C   ;
+; High Junction Temperature ; 85 °C  ;
++---------------------------+--------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (119006): Selected device 10M02SCM153C8G for design "s8ddf"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Error (171016): Can't place node "SWITCH1" -- illegal location assignment PIN_120 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 16
+Error (171016): Can't place node "SWITCH2" -- illegal location assignment PIN_124 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 17
+Error (171016): Can't place node "SWITCH3" -- illegal location assignment PIN_127 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 18
+Error (171016): Can't place node "SWITCH4" -- illegal location assignment PIN_130 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 19
+Error (171016): Can't place node "SWITCH5" -- illegal location assignment PIN_131 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 20
+Error (171016): Can't place node "LED1" -- illegal location assignment PIN_132 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 25
+Error (171016): Can't place node "LED2" -- illegal location assignment PIN_134 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 26
+Error (171016): Can't place node "LED3" -- illegal location assignment PIN_135 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 27
+Error (171016): Can't place node "LED4" -- illegal location assignment PIN_140 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 28
+Error (171016): Can't place node "LED5" -- illegal location assignment PIN_141 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 29
+Error (171016): Can't place node "CLOCK" -- illegal location assignment PIN_27 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 33
+Error (171016): Can't place node "Arduino_A0" -- illegal location assignment PIN_6 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 37
+Error (171016): Can't place node "Arduino_A1" -- illegal location assignment PIN_7 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 38
+Error (171016): Can't place node "Arduino_A2" -- illegal location assignment PIN_8 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 39
+Error (171016): Can't place node "Arduino_A3" -- illegal location assignment PIN_10 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 40
+Error (171016): Can't place node "Arduino_A4" -- illegal location assignment PIN_11 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 41
+Error (171016): Can't place node "Arduino_A5" -- illegal location assignment PIN_12 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 42
+Error (171016): Can't place node "Arduino_A6" -- illegal location assignment PIN_13 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 43
+Error (171016): Can't place node "Arduino_A7" -- illegal location assignment PIN_14 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 44
+Error (171016): Can't place node "RESET_N" -- illegal location assignment PIN_121 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 64
+Error (171016): Can't place node "Arduino_IO0" -- illegal location assignment PIN_74 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 47
+Error (171016): Can't place node "Arduino_IO1" -- illegal location assignment PIN_75 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 48
+Error (171016): Can't place node "Arduino_IO2" -- illegal location assignment PIN_76 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 49
+Error (171016): Can't place node "Arduino_IO3" -- illegal location assignment PIN_77 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 50
+Error (171016): Can't place node "Arduino_IO4" -- illegal location assignment PIN_79 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 51
+Error (171016): Can't place node "Arduino_IO5" -- illegal location assignment PIN_81 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 52
+Error (171016): Can't place node "Arduino_IO6" -- illegal location assignment PIN_84 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 53
+Error (171016): Can't place node "Arduino_IO7" -- illegal location assignment PIN_86 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 54
+Error (171016): Can't place node "Arduino_IO8" -- illegal location assignment PIN_62 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 55
+Error (171016): Can't place node "Arduino_IO9" -- illegal location assignment PIN_64 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 56
+Error (171016): Can't place node "Arduino_IO10" -- illegal location assignment PIN_65 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 57
+Error (171016): Can't place node "Arduino_IO11" -- illegal location assignment PIN_66 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 58
+Error (171016): Can't place node "Arduino_IO12" -- illegal location assignment PIN_69 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 59
+Error (171016): Can't place node "Arduino_IO13" -- illegal location assignment PIN_70 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 60
+Error (171016): Can't place node "DIFFIO_L27N_PLL_CLKOUTN" -- illegal location assignment PIN_32 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 70
+Error (171016): Can't place node "DIFFIO_L27P_PLL_CLKOUTP" -- illegal location assignment PIN_33 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 71
+Error (171016): Can't place node "DIFFIO_L20N_CLK1N" -- illegal location assignment PIN_28 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 72
+Error (171016): Can't place node "DIFFIO_L20P_CLK1P" -- illegal location assignment PIN_29 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 73
+Error (171016): Can't place node "DIFFIO_R14P_CLK2P" -- illegal location assignment PIN_88 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 74
+Error (171016): Can't place node "DIFFIO_R14N_CLK2N" -- illegal location assignment PIN_89 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 75
+Error (171016): Can't place node "DIFFIO_R16P_CLK3P" -- illegal location assignment PIN_90 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 76
+Error (171016): Can't place node "DIFFIO_R16N_CLK3N" -- illegal location assignment PIN_91 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 77
+Error (171016): Can't place node "DIFFIO_R26N_DPCLK2" -- illegal location assignment PIN_98 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 78
+Error (171016): Can't place node "DIFFIO_R26P_DPCLK3" -- illegal location assignment PIN_96 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 79
+Error (171016): Can't place node "DIFFIO_B1N" -- illegal location assignment PIN_38 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 80
+Error (171016): Can't place node "DIFFIO_B1P" -- illegal location assignment PIN_39 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 81
+Error (171016): Can't place node "DIFFIO_B3N" -- illegal location assignment PIN_41 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 82
+Error (171016): Can't place node "DIFFIO_B3P" -- illegal location assignment PIN_43 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 83
+Error (171016): Can't place node "DIFFIO_B5N" -- illegal location assignment PIN_44 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 84
+Error (171016): Can't place node "DIFFIO_B5P" -- illegal location assignment PIN_45 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 85
+Error (171016): Can't place node "DIFFIO_B7N" -- illegal location assignment PIN_46 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 86
+Error (171016): Can't place node "DIFFIO_B7P" -- illegal location assignment PIN_47 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 87
+Error (171016): Can't place node "DIFFIO_B9N" -- illegal location assignment PIN_50 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 88
+Error (171016): Can't place node "DIFFIO_B9P" -- illegal location assignment PIN_52 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 89
+Error (171016): Can't place node "DIFFIO_T1P" -- illegal location assignment PIN_110 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 90
+Error (171016): Can't place node "DIFFIO_T1N" -- illegal location assignment PIN_111 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 91
+Error (171016): Can't place node "DIFFIO_T4N" -- illegal location assignment PIN_113 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 92
+Error (171016): Can't place node "DIFFIO_T6P" -- illegal location assignment PIN_114 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 93
+Error (171016): Can't place node "DIFFIO_B12N" -- illegal location assignment PIN_55 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 94
+Error (171016): Can't place node "DIFFIO_B12P" -- illegal location assignment PIN_56 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 95
+Error (171016): Can't place node "DIFFIO_B14N" -- illegal location assignment PIN_57 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 96
+Error (171016): Can't place node "DIFFIO_B14P" -- illegal location assignment PIN_58 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 97
+Error (171016): Can't place node "DIFFIO_B16N" -- illegal location assignment PIN_59 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 98
+Error (171016): Can't place node "DIFFIO_B16P" -- illegal location assignment PIN_60 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 99
+Error (171016): Can't place node "DIFFIO_R18P" -- illegal location assignment PIN_92 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 100
+Error (171016): Can't place node "DIFFIO_R18N" -- illegal location assignment PIN_93 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 101
+Error (171016): Can't place node "DIFFIO_R27P" -- illegal location assignment PIN_99 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 102
+Error (171016): Can't place node "DIFFIO_R28P" -- illegal location assignment PIN_100 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 103
+Error (171016): Can't place node "DIFFIO_R27N" -- illegal location assignment PIN_101 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 104
+Error (171016): Can't place node "DIFFIO_R28N" -- illegal location assignment PIN_102 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 105
+Error (171016): Can't place node "DIFFIO_R33P" -- illegal location assignment PIN_105 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 106
+Error (171016): Can't place node "DIFFIO_R33N" -- illegal location assignment PIN_106 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 107
+Error (171016): Can't place node "DIFFIO_T10P" -- illegal location assignment PIN_118 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 108
+Error (171016): Can't place node "DIFFIO_T10N" -- illegal location assignment PIN_119 File: D:/coding/fpga2022/s8/max10_10m08_top.v Line: 112
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Error (171000): Can't fit design in device
+Error: Quartus Prime Fitter was unsuccessful. 75 errors, 3 warnings
+    Error: Peak virtual memory: 4944 megabytes
+    Error: Processing ended: Tue Nov 15 12:46:18 2022
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+

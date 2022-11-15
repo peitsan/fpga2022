@@ -1,0 +1,4 @@
+platform_setup.tcl
+filelist.txt
+max10_10m08_top.v
+platform_setup.tcl

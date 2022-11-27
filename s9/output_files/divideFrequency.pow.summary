@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Sun Nov 27 10:32:23 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : divideFrequency
+Top-level Entity Name : DE10_LITE_Golden_Top
+Family : MAX 10
+Device : 10M02SCM153I7G
+Power Models : Final
+Total Thermal Power Dissipation : 72.39 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 66.79 mW
+I/O Thermal Power Dissipation : 5.60 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,34 @@
+module blink
+(
+      clk_in,
+      rst_n_in,
+      led_out
+);
+ 
+parameter       CNT_NUM = 12500000;
+ 
+reg     [23:0]  cnt;
+reg             clk_div;
+ 
+always @(posedge clk_in or negedge rst_n_in)
+begin
+	if(!rst_n_in)
+            begin
+		cnt <= 24'd0;
+		clk_div <= 1;
+	    end
+        else
+            begin
+		if(cnt>=CNT_NUM-1)
+                    begin
+			cnt <= 24'd0;
+			clk_div <= ~clk_div;
+		    end
+                else
+                        cnt <= cnt + 1;
+	    end
+end
+ 
+assign led_out = clk_div;
+ 
+endmodule

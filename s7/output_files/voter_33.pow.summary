@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Tue Nov 15 11:20:53 2022
+Power Analyzer Status : Successful - Thu Dec  1 00:53:27 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : voter_33
-Top-level Entity Name : voter_33
+Top-level Entity Name : decode38
 Family : MAX 10
 Device : 10M02SCM153I7G
 Power Models : Final
-Total Thermal Power Dissipation : 72.25 mW
+Total Thermal Power Dissipation : 72.28 mW
 Core Dynamic Thermal Power Dissipation : 0.00 mW
 Core Static Thermal Power Dissipation : 66.79 mW
-I/O Thermal Power Dissipation : 5.46 mW
+I/O Thermal Power Dissipation : 5.50 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

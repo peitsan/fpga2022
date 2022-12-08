@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/coding/fpga2022/s7/simulation/modelsim
 vio_buf_opdrn
-Z1 !s110 1668482483
+Z1 !s110 1669826835
 !i10b 1
 !s100 z0EcHz62UYUVHTAOUgnd]2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -19,14 +19,14 @@ R0
 Z3 w1656081792
 Z4 8d:/fpga/quartus/eda/sim_lib/sgate.v
 Z5 Fd:/fpga/quartus/eda/sim_lib/sgate.v
-!i122 0
+!i122 12
 L0 249 22
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z8 !s108 1668482483.000000
+Z8 !s108 1669826835.000000
 !s107 d:/fpga/quartus/eda/sim_lib/sgate.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|d:/fpga/quartus/eda/sim_lib/sgate.v|
 !i113 0
@@ -42,7 +42,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 221 23
 R6
 R7
@@ -65,7 +65,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 191 26
 R6
 R7
@@ -88,7 +88,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 19 74
 R6
 R7
@@ -111,7 +111,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 96 91
 R6
 R7
@@ -134,7 +134,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 1073 59
 R6
 R7
@@ -157,7 +157,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 1037 32
 R6
 R7
@@ -180,7 +180,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 395 85
 R6
 R7
@@ -203,7 +203,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 1136 17
 R6
 R7
@@ -226,7 +226,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 573 72
 R6
 R7
@@ -249,7 +249,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 854 88
 R6
 R7
@@ -272,7 +272,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 484 85
 R6
 R7
@@ -295,7 +295,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 275 68
 R6
 R7
@@ -318,7 +318,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 946 42
 R6
 R7
@@ -341,7 +341,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 650 79
 R6
 R7
@@ -364,7 +364,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 733 57
 R6
 R7
@@ -387,7 +387,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 794 56
 R6
 R7
@@ -410,7 +410,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 992 41
 R6
 R7
@@ -433,7 +433,7 @@ R0
 R3
 R4
 R5
-!i122 0
+!i122 12
 L0 348 43
 R6
 R7

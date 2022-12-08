@@ -1,39 +1,33 @@
 `timescale 1ns/100ps
 
 module tb_38decoder;
-
-
-reg a;
-reg b;
-reg c;
+reg [3:0]sw;
 wire [7:0]data;
 
-tb_38decoder tb_38decoder_0(
-    .a(a),
-    .b(b),
-    .c(c),
-    .data(data)
+decode38 tb_38decoder_0(
+	 .SW(sw),
+    .LED(data)
 );
 
 
 initial begin
-    a=0;b=0;c=0;
+	 sw[0] =0;sw[1]=0;sw[2]=0;
     #200;
-    a=0;b=0;c=1;
+    sw[0] =0;sw[1]=0;sw[2]=1;
     #200;
-    a=0;b=1;c=0;
+    sw[0] =0;sw[1]=1;sw[2]=0;
     #200;
-    a=0;b=1;c=1;
+    sw[0] =0;sw[1]=1;sw[2]=1;
     #200;
-    a=1;b=0;c=0;
+    sw[0] =1;sw[1]=0;sw[2]=0;
     #200;
-    a=1;b=0;c=1;
+    sw[0] =1;sw[1]=0;sw[2]=1;
     #200;
-    a=1;b=1;c=0;
+    sw[0] =1;sw[1]=1;sw[2]=0;
     #200;
-    a=1;b=1;c=1;
+    sw[0] =1;sw[1]=1;sw[2]=1;
     #200;
     $stop;
-end
+endA
 
 endmodule

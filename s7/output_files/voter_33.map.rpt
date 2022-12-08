@@ -1,5 +1,5 @@
 Analysis & Synthesis report for voter_33
-Tue Nov 15 11:20:42 2022
+Thu Dec  1 00:53:13 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 15 11:20:42 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec  1 00:53:13 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; voter_33                                    ;
-; Top-level Entity Name              ; voter_33                                    ;
+; Top-level Entity Name              ; decode38                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 16                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 4                                           ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -68,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M02SCM153I7G     ;                    ;
-; Top-level entity name                                            ; voter_33           ; voter_33           ;
+; Top-level entity name                                            ; decode38           ; voter_33           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -169,40 +170,40 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+----------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
 +----------------------------------+-----------------+------------------------+----------------------------------+---------+
-; voter_33.v                       ; yes             ; User Verilog HDL File  ; D:/coding/fpga2022/s7/voter_33.v ;         ;
+; decode38.v                       ; yes             ; User Verilog HDL File  ; D:/coding/fpga2022/s7/decode38.v ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1         ;
-;                                             ;           ;
-; Total combinational functions               ; 1         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 4         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; always0~0 ;
-; Maximum fan-out                             ; 1         ;
-; Total fan-out                               ; 8         ;
-; Average fan-out                             ; 0.89      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 16          ;
+;                                             ;             ;
+; Total combinational functions               ; 16          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 16          ;
+;     -- <=2 input functions                  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 16          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 12          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[2]~input ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 68          ;
+; Average fan-out                             ; 1.70        ;
++---------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,9 +211,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |voter_33                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |voter_33           ; voter_33    ; work         ;
+; |decode38                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |decode38           ; decode38    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LED[0]$latch                                       ; SW[3]               ; yes                    ;
+; LED[1]$latch                                       ; SW[3]               ; yes                    ;
+; LED[2]$latch                                       ; SW[3]               ; yes                    ;
+; LED[3]$latch                                       ; SW[3]               ; yes                    ;
+; LED[4]$latch                                       ; SW[3]               ; yes                    ;
+; LED[5]$latch                                       ; SW[3]               ; yes                    ;
+; LED[6]$latch                                       ; SW[3]               ; yes                    ;
+; LED[7]$latch                                       ; SW[3]               ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -235,13 +254,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         3 data inputs ; 1                           ;
+; boundary_port         ; 12                          ;
+; cycloneiii_lcell_comb ; 16                          ;
+;     normal            ; 16                          ;
+;         3 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -260,30 +279,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Nov 15 11:20:31 2022
+    Info: Processing started: Thu Dec  1 00:53:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off voter_33 -c voter_33
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb_38decoder.v
+    Info (12023): Found entity 1: tb_38decoder File: D:/coding/fpga2022/s7/tb_38decoder.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file voter_33.v
     Info (12023): Found entity 1: voter_33 File: D:/coding/fpga2022/s7/voter_33.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_voter.v
-    Info (12023): Found entity 1: tb_three_voter File: D:/coding/fpga2022/s7/tb_voter.v Line: 3
-Warning (12019): Can't analyze file -- file tb_threevoter.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file 38decoder.v
-    Info (12023): Found entity 1: decode38 File: D:/coding/fpga2022/s7/38decoder.v Line: 1
-Warning (12019): Can't analyze file -- file tb_38decoder4.v is missing
-Info (12127): Elaborating entity "voter_33" for the top level hierarchy
+    Info (12023): Found entity 1: tb_voter File: D:/coding/fpga2022/s7/tb_voter.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file decode38.v
+    Info (12023): Found entity 1: decode38 File: D:/coding/fpga2022/s7/decode38.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/top.v
+    Info (12023): Found entity 1: Top File: D:/coding/fpga2022/s7/output_files/Top.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/segment.v
+    Info (12023): Found entity 1: segment File: D:/coding/fpga2022/s7/output_files/segment.v Line: 1
+Info (12127): Elaborating entity "decode38" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at decode38.v(6): inferring latch(es) for variable "LED", which holds its previous value in one or more paths through the always construct File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[0]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[1]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[2]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[3]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[4]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[5]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[6]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
+Info (10041): Inferred latch for "LED[7]" at decode38.v(6) File: D:/coding/fpga2022/s7/decode38.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 16 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4799 megabytes
-    Info: Processing ended: Tue Nov 15 11:20:42 2022
-    Info: Elapsed time: 00:00:11
+    Info: Processing ended: Thu Dec  1 00:53:13 2022
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:12
 
 

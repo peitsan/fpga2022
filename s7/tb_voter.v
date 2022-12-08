@@ -1,6 +1,6 @@
 `timescale 1ns/100ps //定义仿真时间单位和精度
 
-module tb_three_voter; 
+module tb_voter; 
  
 //激励信号定义，对应连接到待测试模块的输入端口，reg类型
       reg tb_A;
@@ -9,7 +9,7 @@ module tb_three_voter;
 //待检测信号定义，对应连接到待测试模块的输出端口，wire类型
       wire tb_Y;
 //例化待测试模块/调用模块
-	three_voter U_three_voter( 
+	voter_33 U_voter_33( 
       /*input A,B,C;*/  
 		.A(tb_A),
 		.B(tb_B),
@@ -17,7 +17,7 @@ module tb_three_voter;
 		
 	 /*output Y;*/	
 	   .Y(tb_Y) 
-		                      );   
+);   
       
 // 仿真系统初始化/产生激励
    initial begin	

@@ -1,17 +1,13 @@
-module s8ddf(D,CLK,Q,QN):
-	input CLK,D;
-	output Q,QN;
-	BASIC_DFF_DN ul(.Q(Q),.QN(QN),.D(D),.CP(CLK));
-endmodule
-
-module BASIC_DFF_DN(D,CP,C,QN):
-	input D,CP;
-	output Q,QN;
-	reg Q;
-	assign QN=~Q;
-	always@(negedge posedge CP)
-		begin
-			Q = D;
-		end
-endmodule
-	
+module s8ddf
+   (						//模块名及参数定义
+    input clk,rst,d,	
+    output reg q,
+    output wire qb
+   );
+   assign qb = ~q;
+   always @( posedge clk )   //只有clk上升沿时刻触发
+	if(!rst)				  //复位信号判断，低有效
+		q <= 1'b0;        //复位有效时清零
+	else
+		q <= d;           //触发时输出q值为输入d
+  endmodule

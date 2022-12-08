@@ -27,7 +27,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {d:/fpga/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:27 on Nov 15,2022
+# Start time: 11:10:44 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work altera_ver d:/fpga/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -109,7 +109,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 12:30:27 on Nov 15,2022, Elapsed time: 0:00:00
+# End time: 11:10:45 on Dec 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -121,7 +121,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {d:/fpga/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:28 on Nov 15,2022
+# Start time: 11:10:45 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/fpga/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -185,7 +185,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 12:30:28 on Nov 15,2022, Elapsed time: 0:00:00
+# End time: 11:10:46 on Dec 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -197,7 +197,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {d:/fpga/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:29 on Nov 15,2022
+# Start time: 11:10:46 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/fpga/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -239,7 +239,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 12:30:29 on Nov 15,2022, Elapsed time: 0:00:00
+# End time: 11:10:46 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -251,7 +251,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {d:/fpga/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:30 on Nov 15,2022
+# Start time: 11:10:47 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/fpga/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -381,7 +381,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 12:30:31 on Nov 15,2022, Elapsed time: 0:00:01
+# End time: 11:10:47 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -393,7 +393,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {d:/fpga/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:31 on Nov 15,2022
+# Start time: 11:10:48 on Dec 07,2022
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/fpga/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -476,7 +476,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 12:30:32 on Nov 15,2022, Elapsed time: 0:00:01
+# End time: 11:10:49 on Dec 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/fiftyfivenm_ver
@@ -488,7 +488,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work fiftyfivenm_ver {d:/fpga/quartus/eda/sim_lib/fiftyfivenm_atoms.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:32 on Nov 15,2022
+# Start time: 11:10:49 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver d:/fpga/quartus/eda/sim_lib/fiftyfivenm_atoms.v 
 # -- Compiling UDP FIFTYFIVENM_PRIM_DFFE
 # -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS
@@ -581,15 +581,15 @@
 # 	fiftyfivenm_jtag
 # 	fiftyfivenm_adcblock
 # 	fiftyfivenm_phase_detector
-# End time: 12:30:33 on Nov 15,2022, Elapsed time: 0:00:01
+# End time: 11:10:49 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work fiftyfivenm_ver {d:/fpga/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:33 on Nov 15,2022
+# Start time: 11:10:50 on Dec 07,2022
 # vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver d:/fpga/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 12:30:35 on Nov 15,2022, Elapsed time: 0:00:02
+# End time: 11:10:52 on Dec 07,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -601,49 +601,42 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s8 {D:/coding/fpga2022/s8/max10_10m08_top.v}
+# vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s8 {D:/coding/fpga2022/s8/s8jk.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:36 on Nov 15,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/coding/fpga2022/s8" D:/coding/fpga2022/s8/max10_10m08_top.v 
-# -- Compiling module max10_10m08_top
+# Start time: 11:10:52 on Dec 07,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/coding/fpga2022/s8" D:/coding/fpga2022/s8/s8jk.v 
+# -- Compiling module s8jk
 # 
 # Top level modules:
-# 	max10_10m08_top
-# End time: 12:30:36 on Nov 15,2022, Elapsed time: 0:00:00
+# 	s8jk
+# End time: 11:10:52 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s8 {D:/coding/fpga2022/s8/s8ddf_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s8 {D:/coding/fpga2022/s8/s8jk_tb.v}
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:30:36 on Nov 15,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/coding/fpga2022/s8" D:/coding/fpga2022/s8/s8ddf_tb.v 
-# -- Compiling module s8dff_tb
+# Start time: 11:10:52 on Dec 07,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/coding/fpga2022/s8" D:/coding/fpga2022/s8/s8jk_tb.v 
+# -- Compiling module s8jk_tb
 # 
 # Top level modules:
-# 	s8dff_tb
-# End time: 12:30:36 on Nov 15,2022, Elapsed time: 0:00:00
+# 	s8jk_tb
+# End time: 11:10:52 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  s8ddf_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" s8ddf_tb 
-# Start time: 12:30:36 on Nov 15,2022
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  s8jk_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" s8jk_tb 
+# Start time: 11:10:52 on Dec 07,2022
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit s8ddf_tb.
-#         Searched libraries:
-#             altera_ver
-#             lpm_ver
-#             sgate_ver
-#             altera_mf_ver
-#             altera_lnsim_ver
-#             fiftyfivenm_ver
-#             rtl_work
-#             work
-#             work
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./s8ddf_run_msim_rtl_verilog.do PAUSED at line 41
-# A time value could not be extracted from the current line
-# End time: 13:32:13 on Nov 15,2022, Elapsed time: 1:01:37
-# Errors: 1, Warnings: 0
+# Loading work.s8jk_tb(fast)
+# Loading work.s8jk(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Module s8jk_tb at D:/coding/fpga2022/s8/s8jk_tb.v line 25
+# End time: 11:12:39 on Dec 07,2022, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 0

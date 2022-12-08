@@ -36,9 +36,9 @@ vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s7 {D:/coding/fpga2022/s7/voter_33.v}
 
-vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s7 {D:/coding/fpga2022/s7/tb_voter.v}
+vlog -vlog01compat -work work +incdir+D:/coding/fpga2022/s7 {D:/coding/fpga2022/s7/tb_38decoder.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  tb_voter
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  tb_38decorder
 
 add wave *
 view structure
